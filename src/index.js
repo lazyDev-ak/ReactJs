@@ -3,12 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MyComp from './MyComp';
+
+const tag= <h1>Hello React!!!</h1>
+const message="Hiiiiii"
+
+const data={
+  name:"John",
+  city:"Pune"
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <MyComp/>
 );
 
 // If you want to start measuring performance in your app, pass a function
