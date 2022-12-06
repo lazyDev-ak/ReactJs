@@ -12,6 +12,7 @@ function MyComp(){
        setFirstName(event.target.value)
        // console.log(firstName);
     }
+    
     return(
         <div>
             <h1>My Comp!!!</h1>
