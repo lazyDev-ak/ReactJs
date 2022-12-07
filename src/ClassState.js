@@ -1,7 +1,6 @@
 import React from 'react'
 
 class ClassState extends React.Component{
-
     constructor(){
         this.state={
             number:0

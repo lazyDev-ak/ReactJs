@@ -3,7 +3,7 @@ import React,{useState} from 'react'
 function IncDec(){
 
     const[number,setNumber]=useState(0)
-   
+ 
     const inc=()=>{
         setNumber(number+10)
     }
