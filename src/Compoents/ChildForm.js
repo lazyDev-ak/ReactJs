@@ -3,16 +3,20 @@ import React from 'react'
 function ChildForm(props) {
   return (
     <div>
-        <table className=' ml-2 mt-2 border-slate-600'>
-            <th>
-                <td className='border-2 border-slate-600 p-2 w-4'>FirstName</td>
-                <td className='border-2 border-slate-600 p-2 w-4'>LastName</td>
-            </th>
-            <tr>
-                <td className='border-2 border-slate-600 p-2 w-4'>{props.capturedData.firstName}</td>
-                <td className='border-2 border-slate-600 p-2 w-4'>{props.capturedData.lastName}</td>
-            </tr>
-        </table>
+      <table>
+        <tbody>
+        <tr>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Age</td>
+        </tr>
+        <tr>
+          <td>{props.userInputData.firstName}</td>
+          <td>{props.userInputData.lastName}</td>
+          <td>{props.userInputData.age}</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   )
 }

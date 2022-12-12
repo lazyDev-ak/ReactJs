@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css'
+// import './index.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MyComp from './MyComp';
@@ -9,6 +9,7 @@ import ClassState from './ClassState';
 import PropsDemo from './PropsDemo';
 import Form from './Compoents/Form';
 import PropsInput from './PropsInput';
+import PropsExample from './PropsExample';
 
 const tag= <h1>Hello React!!!</h1>
 const message="Hiiiiii"
@@ -21,8 +22,9 @@ const data={
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
-    <PropsInput/>
-  <PropsDemo/>
+    {/* <PropsInput/>
+    <PropsDemo/> */}
+    <PropsExample/>
   </div>
   
   // <Form/>

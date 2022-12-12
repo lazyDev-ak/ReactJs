@@ -2,20 +2,30 @@ import React from 'react'
 import ChildForm from './ChildForm'
 
 function Form() {
-  const [capturedData,setCapturedData]= React.useState({});
-  const capture = (event) =>{
-    setCapturedData({
-      firstName: event.target.value,
-      lastName: event.target.value
+  const [userInputData,setUserInputData]= React.useState({
+    firstName:"",
+    lastName:"",
+    age:"",
+  });
+  const capture = (e) =>{
+    setUserInputData({
+      ...userInputData,
+      [e.target.name]: e.target.value,
     })
   }
+  const handleSubmit = () => {
+    
+  }
+  console.log(userInputData);
   return (
     <div>
       <div className='mt-2'>
-        <input id='firstName' onChange={capture} className='border-2 border-slate-800 ml-2' placeholder='First Name'></input>
-        <input id='lastName'onChange={capture} className='border-2 border-slate-800 ml-2' placeholder='Last Name'></input>
+        <input type="text" name='firstName' onChange={capture} placeholder='First Name'></input>
+        <input type="text" name='lastName' onChange={capture} placeholder='Last Name'></input>
+        <input type="date" name='age' onChange={capture} placeholder='Last Name'></input>
+        <button onClick={handleSubmit}>Submit</button>
       </div>
-      <ChildForm capturedData={capturedData} />
+      <ChildForm userInputData={userInputData}/>
     </div>
   )
 }
