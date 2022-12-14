@@ -15,10 +15,10 @@ function CallBackEvent(){
     )
 }
 
-function CheckCallBack(props){
+function CheckCallBack({handleChange}){
 
     return(
-        <input type='text' onChange={props.handleChange}/>
+        <input type='text' onChange={handleChange}/>
     )
 }
 
