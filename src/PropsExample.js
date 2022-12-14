@@ -3,7 +3,7 @@ import React from 'react'
 function PropsExample(){
 
     const userObj={
-        firstName:'',
+        firstNam:'',
         lastName:''
     }
 
@@ -11,10 +11,12 @@ function PropsExample(){
     const[userList,setUserList]=React.useState([])
 
     const handleInput=(event)=>{
+        console.log(event.target);
        setUser({...user,[event.target.name]:event.target.value})
     }
 
     const addData=()=>{
+        console.log(user);
         setUserList([...userList,user])
         document.getElementById('myform').reset()
     }
