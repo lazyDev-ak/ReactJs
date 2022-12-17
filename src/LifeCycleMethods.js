@@ -1,4 +1,6 @@
 import React from 'react'
+import ComponentOne from './ComponentOne';
+import ComponentTwo from './ComponentTwo';
 
 class LifeCycleMethods extends React.Component{
 
@@ -19,12 +21,15 @@ class LifeCycleMethods extends React.Component{
         this.setState({number:this.state.number+1})
     }
 
+
     render(){
+        const component= this.state.number ? <ComponentOne/> : <ComponentTwo/>
         return(
             <div>
                 <h1>Life Cycle Methods!!!</h1>
                 <p>Number is: {this.state.number}</p>
                 <button onClick={this.increment}>Add</button>
+                {component}
             </div>
         )
     }

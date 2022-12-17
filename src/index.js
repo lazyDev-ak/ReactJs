@@ -12,6 +12,7 @@ import PropsInput from './PropsInput';
 import PropsExample from './PropsExample';
 import CallBackEvent from './CallBackEvent';
 import LifeCycleMethods from './LifeCycleMethods';
+import UseEffectDemo from './UseEffectDemo';
 
 const tag= <h1>Hello React!!!</h1>
 const message="Hiiiiii"
@@ -26,7 +27,7 @@ root.render(
   <div>
     {/* <PropsInput/>
     <PropsDemo/> */}
-    <LifeCycleMethods/>
+    <UseEffectDemo/>
   </div>
   
   // <Form/>
