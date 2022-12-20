@@ -13,6 +13,7 @@ import PropsExample from './PropsExample';
 import CallBackEvent from './CallBackEvent';
 import LifeCycleMethods from './LifeCycleMethods';
 import UseEffectDemo from './UseEffectDemo';
+import App1 from './App1';
 
 const tag= <h1>Hello React!!!</h1>
 const message="Hiiiiii"
@@ -27,7 +28,7 @@ root.render(
   <div>
     {/* <PropsInput/>
     <PropsDemo/> */}
-    <UseEffectDemo/>
+    <App1/>
   </div>
   
   // <Form/>
