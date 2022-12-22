@@ -14,6 +14,7 @@ import CallBackEvent from './CallBackEvent';
 import LifeCycleMethods from './LifeCycleMethods';
 import UseEffectDemo from './UseEffectDemo';
 import App1 from './App1';
+import UseContextDemo from './UseContextDemo';
 
 const tag= <h1>Hello React!!!</h1>
 const message="Hiiiiii"
@@ -28,7 +29,7 @@ root.render(
   <div>
     {/* <PropsInput/>
     <PropsDemo/> */}
-    <App1/>
+    <UseContextDemo/>
   </div>
   
   // <Form/>
