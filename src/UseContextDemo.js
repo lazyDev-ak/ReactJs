@@ -1,10 +1,11 @@
 import React, { createContext, useContext } from "react"
+import Three from "./Three"
 
-const MyContext=createContext()
+export const MyContext=createContext()
 
 function UseContextDemo(){
 
-    const [message,setMessage]=React.useState("Hello React!!!")
+    const [message,setMessage]=React.useState()
 
     const handleChange=()=>{
         setMessage("Hiiiiiiiii")
@@ -18,20 +19,16 @@ function UseContextDemo(){
             <button type="button" onClick={handleChange}>Change</button>
             <CheckContextOne/>
             <CheckContextTwo/>
-
-        </div>
+            <Three/>
+            </div>
         </MyContext.Provider>
     )
 }
-
 function CheckContextOne(){
-
-    const {message,setMessage}=useContext(MyContext)
-
+     const {message,setMessage}=useContext(MyContext)
     const handleChange=()=>{
         setMessage("Helloooooooo")
     }
-
     return(
         <div>
             <h2>Check Context One</h2>
@@ -40,10 +37,8 @@ function CheckContextOne(){
         </div>
     )
 }
-
-
 function CheckContextTwo(){
-    
+
     const {message,setMessage}=useContext(MyContext)
 
     const handleChange=()=>{
@@ -57,5 +52,4 @@ function CheckContextTwo(){
         </div>
     )
 }
-
 export default UseContextDemo
