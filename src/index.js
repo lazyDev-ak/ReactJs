@@ -15,6 +15,7 @@ import LifeCycleMethods from './LifeCycleMethods';
 import UseEffectDemo from './UseEffectDemo';
 import App1 from './App1';
 import UseContextDemo from './UseContextDemo';
+import UseMemoHook from './UseMemoHook';
 
 const tag= <h1>Hello React!!!</h1>
 const message="Hiiiiii"
@@ -29,7 +30,7 @@ root.render(
   <div>
     {/* <PropsInput/>
     <PropsDemo/> */}
-    <UseContextDemo/>
+    <UseMemoHook/>
   </div>
   
   // <Form/>
