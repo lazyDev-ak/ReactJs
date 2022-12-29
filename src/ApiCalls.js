@@ -20,8 +20,9 @@ function ApiCall(){
         title:"Demo",
         body:"Test POST API"
     }
-    const sendData=()=>{
-        axios.post("https://jsonplaceholder.typicode.com/posts",post)
+
+    const sendData= async ()=>{
+        await axios.post("https://jsonplaceholder.typicode.com/posts",post)
         .then(response=>response.data)
         .then(res=>{
             console.log(res);
