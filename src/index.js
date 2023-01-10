@@ -17,6 +17,8 @@ import App1 from './App1';
 import UseContextDemo from './UseContextDemo';
 import UseMemoHook from './UseMemoHook';
 import ApiCall from './ApiCalls';
+import UseModel from './Compoents/UseModel';
+import UseReducerHook from './UseReducerHook';
 
 const tag= <h1>Hello React!!!</h1>
 const message="Hiiiiii"
@@ -31,7 +33,8 @@ root.render(
   <div>
     {/* <PropsInput/>
     <PropsDemo/> */}
-    <ApiCall/>
+    {/* <ApiCall/> */}
+    <UseReducerHook/>
   </div>
   
   // <Form/>
