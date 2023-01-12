@@ -1,6 +1,6 @@
 import * as actionTypes from '../actions/actionTypes'
 
-const counterReducer=(state,action)=>{
+const counterReducer=(state=100,action)=>{
     let newState
     switch(action.type){
         case actionTypes.ADD_COUNTER:
