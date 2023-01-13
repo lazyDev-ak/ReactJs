@@ -1,8 +1,8 @@
 import * as actionTypes from './actionTypes'
 
-export const addCounter=()=>({
+export const addCounter=(product)=>({
     type:actionTypes.ADD_COUNTER,
-    payload:1
+    payload:product
 })
 
 export const reduceCounter=()=>({

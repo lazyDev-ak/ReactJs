@@ -5,14 +5,15 @@ function Counter(props){
     return(
         <div>
             <h1>Counter App</h1>
-            <p>Count is : {props.count}</p>
+            {/* <p>Count is : {props.count}</p> */}
+            {JSON.stringify(props.products)}
         </div>
     )
 }
 
 function mapStateToProps(state){
     return{
-        count:state.counterReducer
+        products:state.counterReducer
     }
 }
 
