@@ -1,0 +1,19 @@
+Data base start normal and admin 
+
+mongod --dbpath D:\mongodb\data
+mongod --auth --dbpath D:\mongodb\data
+
+
+admin user setup 
+
+ use admin;     --- need to switch to admin db to setup user
+ db.createUser({"user":"admin","pwd":"admin","roles":["readWriteAnyDatabase","dbAdminAnyDatabase","userAdminAnyDatabase"]});       ---command to create user with basis required roles 
+ show collections; --to check if the admin user collection is created or  not 
+ 
+
+ db.auth("admin","admin"); ----to verify the user creation 
+
+
+exit
+then restart the database in the mongo server in admin mode 
+then login in auth mode in mongosh or mongod 
