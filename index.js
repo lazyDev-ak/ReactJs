@@ -44,6 +44,17 @@ app.post("/send",(req,res)=>{
     res.send(req.body)
 })
 
+app.get("/addNumbers/:num1/:num2",(req,res)=>{
+    let result=Number(req.params.num1) + Number(req.params.num2);
+    res.send({"result":result})
+})
+
+app.post("/addNum",(req,res)=>{
+    let obj = req.body
+    let result=Number(obj.num1) + Number(obj.num2);
+    res.send({"result":result})
+})
+
 app.listen(8889,()=>{
     console.log('Server Started on Port 8889');
 })
