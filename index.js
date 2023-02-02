@@ -3,18 +3,17 @@ const cors=require('cors')
 
 const app=express()
 
-// const corsOptions={
-//     origin:"http://localhost:3000"
-// }
+const corsOptions={
+    origin:"http://localhost:3000"
+}
 
-// app.use(cors(corsOptions))
+app.use(cors(corsOptions))
 app.use(express.json())
 
 // return string
 app.get("/check",(req,res)=>{
     res.send("Hello from Node Express Server!!!")
 })
-
 
 const person={
     name:"Peter",
@@ -39,7 +38,7 @@ app.get("/multiple",(req,res)=>{
     res.send(users)
 })
 
-app.post("/send",(req,res)=>{
+app.post("/saveData",(req,res)=>{
     console.log(req.body);
     res.send(req.body)
 })
