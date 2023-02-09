@@ -1,11 +1,13 @@
-module.exports=mongoo=>{
+const { mongoose } = require(".")
 
-    let schema= mongoose.Schema({
+module.exports=mongoose=>{
+
+    let Schema= mongoose.Schema({
         firstName:String,
         lastName:String,
         city:String
     })
 
-    const User=mongoose.model("user",schema)
+    const User=mongoose.model("user",Schema)
     return User
 }

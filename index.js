@@ -5,8 +5,16 @@ var app = express();
 app.use(cors());
 app.use(express.json())
 
-var sever =api.listen(8000,()=>{
-    var host = "127.0.0.1";
+const db=require("./models")
+
+db.mongoose.connect(db.url).then(()=>{
+    console.log('Connected to Database !!!')
+})
+
+require('./routes/db.routes')(app)
+
+var sever = app.listen(8000,()=>{
+//    var host = "127.0.0.1";
     var port = sever.address().port;
-    console.log(`Listening at http://${host}:${port}`);
+    console.log(`Listening at ${port}`);
 })
